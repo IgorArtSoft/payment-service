@@ -1,4 +1,4 @@
-package io.github.igorartsoft.kafkademo.paymentservice;
+package dev.igorartsoft.paymentservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

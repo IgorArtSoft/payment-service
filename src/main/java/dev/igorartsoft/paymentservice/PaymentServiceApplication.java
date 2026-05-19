@@ -1,4 +1,4 @@
-package io.github.igorartsoft.kafkademo.paymentservice;
+package dev.igorartsoft.paymentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
