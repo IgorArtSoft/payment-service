@@ -22,3 +22,7 @@ spring:
         spring.json.value.default.type: dev.igorartsoft.paymentservice.kafka.OrderEvent
         spring.json.trusted.packages: "dev.igorartsoft.paymentservice.kafka"
         spring.json.use.type.headers: false
+
+  data:
+    mongodb:
+      uri: mongodb://admin:admin123@localhost:27017/paymentdb?authSource=admin				
