@@ -1,0 +1,685 @@
+2026-05-21T00:04:50.120-04:00  INFO 3444 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 25.0.2 with PID 3444 (D:\Programming\webservicesjava25\payment-service\target\classes started by igora in D:\Programming\webservicesjava25\payment-service)
+2026-05-21T00:04:50.125-04:00 DEBUG 3444 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-21T00:04:50.126-04:00  INFO 3444 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T00:04:50.661-04:00  INFO 3444 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-21T00:04:50.716-04:00  INFO 3444 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 MongoDB repository interface.
+2026-05-21T00:04:51.094-04:00  INFO 3444 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-21T00:04:51.104-04:00  INFO 3444 --- [payment-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T00:04:51.105-04:00  INFO 3444 --- [payment-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-21T00:04:51.150-04:00  INFO 3444 --- [payment-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 985 ms
+2026-05-21T00:04:51.385-04:00  INFO 3444 --- [payment-service] [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.2+10-69"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@299b9851], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@191a0351, com.mongodb.Jep395RecordCodecProvider@67328bcb, com.mongodb.KotlinCodecProvider@51ba952e, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@2416c658], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-21T00:04:51.409-04:00  INFO 3444 --- [payment-service] [cluster-ClusterId{value='6a0e8463d401f5106ee347e1', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15099100, minRoundTripTimeNanos=0}
+2026-05-21T00:04:52.092-04:00  INFO 3444 --- [payment-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-21T00:04:52.170-04:00  INFO 3444 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-21T00:04:52.204-04:00  INFO 3444 --- [payment-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-payment-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = payment-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2026-05-21T00:04:52.236-04:00  INFO 3444 --- [payment-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-05-21T00:04:52.394-04:00  INFO 3444 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-05-21T00:04:52.394-04:00  INFO 3444 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-05-21T00:04:52.394-04:00  INFO 3444 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1779336292393
+2026-05-21T00:04:52.404-04:00  INFO 3444 --- [payment-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Subscribed to topic(s): orders
+2026-05-21T00:04:52.413-04:00  INFO 3444 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.685 seconds (process running for 3.005)
+2026-05-21T00:04:52.691-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-05-21T00:04:52.693-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-05-21T00:04:52.696-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:04:52.712-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: need to re-join with the given member-id: consumer-payment-service-1-3b0c737b-7fd7-4ebb-bd35-de1906f972b4
+2026-05-21T00:04:52.713-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:04:55.719-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully joined group with generation Generation{generationId=24, memberId='consumer-payment-service-1-3b0c737b-7fd7-4ebb-bd35-de1906f972b4', protocol='range'}
+2026-05-21T00:04:55.726-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Finished assignment for group at generation 24: {consumer-payment-service-1-3b0c737b-7fd7-4ebb-bd35-de1906f972b4=Assignment(partitions=[orders-0])}
+2026-05-21T00:04:55.731-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully synced group in generation Generation{generationId=24, memberId='consumer-payment-service-1-3b0c737b-7fd7-4ebb-bd35-de1906f972b4', protocol='range'}
+2026-05-21T00:04:55.732-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Notifying assignor about the new Assignment(partitions=[orders-0])
+2026-05-21T00:04:55.733-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Adding newly assigned partitions: [orders-0]
+2026-05-21T00:04:55.742-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition orders-0 to the committed offset FetchPosition{offset=6, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=14}}
+2026-05-21T00:04:55.745-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: partitions assigned: [orders-0]
+2026-05-21T00:05:23.674-04:00 DEBUG 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:05:24.743-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Seeking to offset 6 for partition orders-0
+2026-05-21T00:05:24.744-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2026-05-21T00:05:24.757-04:00 DEBUG 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:05:25.767-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Seeking to offset 6 for partition orders-0
+2026-05-21T00:05:25.768-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2026-05-21T00:05:25.783-04:00 DEBUG 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:05:25.795-04:00 ERROR 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] d.i.p.config.KafkaErrorConfig            : PAYMENT_STAGE_0_KAFKA_PROCESSING_FAILED topic=orders partition=0 offset=6 key=ORD-1007 value=OrderEvent[eventId=6b87a6bf-dce0-4921-9c05-732b9d25d078, orderId=ORD-1007, customerId=CUST-1003, amount=267.91, createdAt=2026-05-21T04:05:23.590034Z]
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void dev.igorartsoft.paymentservice.kafka.OrderEventConsumer.consume(dev.igorartsoft.paymentservice.event.OrderEvent,java.lang.String,int,long)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:3090) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2961) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2927) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2837) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2679) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2573) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2204) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1559) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1499) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1368) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:513) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:425) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:52) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2948) ~[spring-kafka-4.0.5.jar:4.0.5]
+Caused by: org.springframework.data.mongodb.UncategorizedMongoDbException: Command execution failed on MongoDB server with error 13 (Unauthorized): 'Command insert requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Command insert requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:150) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:72) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3170) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:628) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1625) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1427) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1355) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.insert(SimpleMongoRepository.java:250) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.7.jar:7.0.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy88.insert(Unknown Source) ~[na:na]
+	at dev.igorartsoft.paymentservice.kafka.OrderEventConsumer.consume(OrderEventConsumer.java:47) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:168) ~[spring-messaging-7.0.7.jar:7.0.7]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:48) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-7.0.7.jar:7.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:80) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:488) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:425) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:52) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2948) ~[spring-kafka-4.0.5.jar:4.0.5]
+	... 10 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command execution failed on MongoDB server with error 13 (Unauthorized): 'Command insert requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Command insert requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:757) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:60) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:207) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:112) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:305) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.executeCommand(MixedBulkWriteOperation.java:433) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.executeBulkWriteBatch(MixedBulkWriteOperation.java:279) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$2(MixedBulkWriteOperation.java:215) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$3(MixedBulkWriteOperation.java:200) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$decorateWriteWithRetries$0(MixedBulkWriteOperation.java:152) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:219) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:81) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:448) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1117) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:499) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:482) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:476) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$0(MongoTemplate.java:1631) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:626) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	... 45 common frames omitted
+
+2026-05-21T00:09:59.971-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Revoke previously assigned partitions [orders-0]
+2026-05-21T00:09:59.973-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: partitions revoked: [orders-0]
+2026-05-21T00:09:59.976-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Member consumer-payment-service-1-3b0c737b-7fd7-4ebb-bd35-de1906f972b4 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) due to the consumer unsubscribed from all topics
+2026-05-21T00:09:59.979-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-05-21T00:09:59.980-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: consumer pro-actively leaving the group
+2026-05-21T00:09:59.981-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Unsubscribed all topics or patterns and assigned partitions
+2026-05-21T00:09:59.988-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-05-21T00:09:59.989-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: consumer pro-actively leaving the group
+2026-05-21T00:10:00.294-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-05-21T00:10:00.295-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-21T00:10:00.296-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-05-21T00:10:00.296-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-05-21T00:10:00.318-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-payment-service-1 unregistered
+2026-05-21T00:10:00.320-04:00  INFO 3444 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: Consumer stopped
+2026-05-21T00:10:00.324-04:00  INFO 3444 --- [payment-service] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-21T00:10:00.348-04:00  INFO 3444 --- [payment-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-21T00:10:10.224-04:00  INFO 21344 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 25.0.2 with PID 21344 (D:\Programming\webservicesjava25\payment-service\target\classes started by igora in D:\Programming\webservicesjava25\payment-service)
+2026-05-21T00:10:10.226-04:00 DEBUG 21344 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-21T00:10:10.227-04:00  INFO 21344 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T00:10:10.738-04:00  INFO 21344 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-21T00:10:10.789-04:00  INFO 21344 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 MongoDB repository interface.
+2026-05-21T00:10:11.152-04:00  INFO 21344 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-21T00:10:11.162-04:00  INFO 21344 --- [payment-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T00:10:11.162-04:00  INFO 21344 --- [payment-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-21T00:10:11.208-04:00  INFO 21344 --- [payment-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 944 ms
+2026-05-21T00:10:11.445-04:00  INFO 21344 --- [payment-service] [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.2+10-69"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@53dd42d6], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@1e76afeb, com.mongodb.Jep395RecordCodecProvider@447fa959, com.mongodb.KotlinCodecProvider@3e4d40ea, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@73f6e07], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-21T00:10:11.467-04:00  INFO 21344 --- [payment-service] [cluster-ClusterId{value='6a0e85a3d092c59fa668ace5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14015500, minRoundTripTimeNanos=0}
+2026-05-21T00:10:12.170-04:00  INFO 21344 --- [payment-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-21T00:10:12.244-04:00  INFO 21344 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-21T00:10:12.275-04:00  INFO 21344 --- [payment-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-payment-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = payment-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2026-05-21T00:10:12.305-04:00  INFO 21344 --- [payment-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-05-21T00:10:12.456-04:00  INFO 21344 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-05-21T00:10:12.457-04:00  INFO 21344 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-05-21T00:10:12.457-04:00  INFO 21344 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1779336612454
+2026-05-21T00:10:12.465-04:00  INFO 21344 --- [payment-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Subscribed to topic(s): orders
+2026-05-21T00:10:12.475-04:00  INFO 21344 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.624 seconds (process running for 2.941)
+2026-05-21T00:10:12.732-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-05-21T00:10:12.735-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-05-21T00:10:12.737-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:10:12.752-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: need to re-join with the given member-id: consumer-payment-service-1-e818731a-7948-4384-9c71-71c391927429
+2026-05-21T00:10:12.753-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:10:15.758-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully joined group with generation Generation{generationId=26, memberId='consumer-payment-service-1-e818731a-7948-4384-9c71-71c391927429', protocol='range'}
+2026-05-21T00:10:15.769-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Finished assignment for group at generation 26: {consumer-payment-service-1-e818731a-7948-4384-9c71-71c391927429=Assignment(partitions=[orders-0])}
+2026-05-21T00:10:15.777-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully synced group in generation Generation{generationId=26, memberId='consumer-payment-service-1-e818731a-7948-4384-9c71-71c391927429', protocol='range'}
+2026-05-21T00:10:15.779-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Notifying assignor about the new Assignment(partitions=[orders-0])
+2026-05-21T00:10:15.781-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Adding newly assigned partitions: [orders-0]
+2026-05-21T00:10:15.790-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition orders-0 to the committed offset FetchPosition{offset=7, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=14}}
+2026-05-21T00:10:15.792-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: partitions assigned: [orders-0]
+2026-05-21T00:10:43.497-04:00 DEBUG 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:10:44.566-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Seeking to offset 7 for partition orders-0
+2026-05-21T00:10:44.568-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2026-05-21T00:10:44.580-04:00 DEBUG 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:10:45.594-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Seeking to offset 7 for partition orders-0
+2026-05-21T00:10:45.595-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Record in retry and not yet recovered
+2026-05-21T00:10:45.610-04:00 DEBUG 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments
+2026-05-21T00:10:45.622-04:00 ERROR 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] d.i.p.config.KafkaErrorConfig            : PAYMENT_STAGE_0_KAFKA_PROCESSING_FAILED topic=orders partition=0 offset=7 key=ORD-1008 value=OrderEvent[eventId=bf639d26-ccb6-4da9-9253-accd54160f55, orderId=ORD-1008, customerId=CUST-1008, amount=267.91, createdAt=2026-05-21T04:10:43.433443400Z]
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void dev.igorartsoft.paymentservice.kafka.OrderEventConsumer.consume(dev.igorartsoft.paymentservice.event.OrderEvent,java.lang.String,int,long)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:3090) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2961) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2927) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2837) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2679) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2573) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2204) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1559) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1499) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1368) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:513) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:425) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:52) ~[spring-kafka-4.0.5.jar:4.0.5]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2948) ~[spring-kafka-4.0.5.jar:4.0.5]
+Caused by: org.springframework.data.mongodb.UncategorizedMongoDbException: Command execution failed on MongoDB server with error 13 (Unauthorized): 'Command insert requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Command insert requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:150) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:72) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3170) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:628) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1625) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1427) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1355) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.insert(SimpleMongoRepository.java:250) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.7.jar:7.0.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy88.insert(Unknown Source) ~[na:na]
+	at dev.igorartsoft.paymentservice.kafka.OrderEventConsumer.consume(OrderEventConsumer.java:47) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:168) ~[spring-messaging-7.0.7.jar:7.0.7]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:48) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-7.0.7.jar:7.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:80) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:488) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:425) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:52) ~[spring-kafka-4.0.5.jar:4.0.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2948) ~[spring-kafka-4.0.5.jar:4.0.5]
+	... 10 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command execution failed on MongoDB server with error 13 (Unauthorized): 'Command insert requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Command insert requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:210) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:520) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:448) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:111) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:757) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:60) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:207) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:112) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:82) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:305) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.executeCommand(MixedBulkWriteOperation.java:433) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.executeBulkWriteBatch(MixedBulkWriteOperation.java:279) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$2(MixedBulkWriteOperation.java:215) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:131) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:130) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:156) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:129) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$execute$3(MixedBulkWriteOperation.java:200) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.lambda$decorateWriteWithRetries$0(MixedBulkWriteOperation.java:152) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:219) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.internal.operation.MixedBulkWriteOperation.execute(MixedBulkWriteOperation.java:81) ~[mongodb-driver-core-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:448) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1117) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:499) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:482) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:476) ~[mongodb-driver-sync-5.6.5.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$0(MongoTemplate.java:1631) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:626) ~[spring-data-mongodb-5.0.5.jar:5.0.5]
+	... 45 common frames omitted
+
+2026-05-21T00:23:13.195-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Revoke previously assigned partitions [orders-0]
+2026-05-21T00:23:13.198-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: partitions revoked: [orders-0]
+2026-05-21T00:23:13.200-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Member consumer-payment-service-1-e818731a-7948-4384-9c71-71c391927429 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) due to the consumer unsubscribed from all topics
+2026-05-21T00:23:13.203-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-05-21T00:23:13.204-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: consumer pro-actively leaving the group
+2026-05-21T00:23:13.205-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Unsubscribed all topics or patterns and assigned partitions
+2026-05-21T00:23:13.210-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-05-21T00:23:13.211-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: consumer pro-actively leaving the group
+2026-05-21T00:23:13.702-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-05-21T00:23:13.703-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-05-21T00:23:13.703-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-05-21T00:23:13.704-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-05-21T00:23:13.720-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-payment-service-1 unregistered
+2026-05-21T00:23:13.722-04:00  INFO 21344 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: Consumer stopped
+2026-05-21T00:23:13.722-04:00  INFO 21344 --- [payment-service] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-21T00:23:13.731-04:00  INFO 21344 --- [payment-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-21T00:23:24.664-04:00  INFO 6904 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Starting PaymentServiceApplication using Java 25.0.2 with PID 6904 (D:\Programming\webservicesjava25\payment-service\target\classes started by igora in D:\Programming\webservicesjava25\payment-service)
+2026-05-21T00:23:24.666-04:00 DEBUG 6904 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-21T00:23:24.667-04:00  INFO 6904 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T00:23:25.190-04:00  INFO 6904 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-21T00:23:25.239-04:00  INFO 6904 --- [payment-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 MongoDB repository interface.
+2026-05-21T00:23:25.614-04:00  INFO 6904 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-21T00:23:25.625-04:00  INFO 6904 --- [payment-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T00:23:25.626-04:00  INFO 6904 --- [payment-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-21T00:23:25.669-04:00  INFO 6904 --- [payment-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 966 ms
+2026-05-21T00:23:25.911-04:00  INFO 6904 --- [payment-service] [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/25.0.2+10-69"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@2c6c302f], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2478b629, com.mongodb.Jep395RecordCodecProvider@39023dbf, com.mongodb.KotlinCodecProvider@1a2ac487, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@570a62a5], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-21T00:23:25.932-04:00  INFO 6904 --- [payment-service] [cluster-ClusterId{value='6a0e88bd6488ded0915f898f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14282500, minRoundTripTimeNanos=0}
+2026-05-21T00:23:26.645-04:00  INFO 6904 --- [payment-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-21T00:23:26.721-04:00  INFO 6904 --- [payment-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-21T00:23:26.752-04:00  INFO 6904 --- [payment-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-payment-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = payment-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2026-05-21T00:23:26.781-04:00  INFO 6904 --- [payment-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-05-21T00:23:26.928-04:00  INFO 6904 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-05-21T00:23:26.928-04:00  INFO 6904 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-05-21T00:23:26.929-04:00  INFO 6904 --- [payment-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1779337406926
+2026-05-21T00:23:26.936-04:00  INFO 6904 --- [payment-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Subscribed to topic(s): orders
+2026-05-21T00:23:26.949-04:00  INFO 6904 --- [payment-service] [main] d.i.p.PaymentServiceApplication          : Started PaymentServiceApplication in 2.674 seconds (process running for 3.001)
+2026-05-21T00:23:27.216-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-05-21T00:23:27.219-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-05-21T00:23:27.223-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:23:27.237-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Request joining group due to: need to re-join with the given member-id: consumer-payment-service-1-2fe5b5c5-00ba-4562-9ee4-a8a469838c6d
+2026-05-21T00:23:27.238-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] (Re-)joining group
+2026-05-21T00:23:30.247-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully joined group with generation Generation{generationId=28, memberId='consumer-payment-service-1-2fe5b5c5-00ba-4562-9ee4-a8a469838c6d', protocol='range'}
+2026-05-21T00:23:30.276-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Finished assignment for group at generation 28: {consumer-payment-service-1-2fe5b5c5-00ba-4562-9ee4-a8a469838c6d=Assignment(partitions=[orders-0])}
+2026-05-21T00:23:30.289-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Successfully synced group in generation Generation{generationId=28, memberId='consumer-payment-service-1-2fe5b5c5-00ba-4562-9ee4-a8a469838c6d', protocol='range'}
+2026-05-21T00:23:30.291-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Notifying assignor about the new Assignment(partitions=[orders-0])
+2026-05-21T00:23:30.295-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-payment-service-1, groupId=payment-service] Adding newly assigned partitions: [orders-0]
+2026-05-21T00:23:30.313-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition orders-0 to the committed offset FetchPosition{offset=8, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=14}}
+2026-05-21T00:23:30.317-04:00  INFO 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : payment-service: partitions assigned: [orders-0]
+2026-05-21T00:23:56.235-04:00 DEBUG 6904 --- [payment-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [orderId, eventId, customerId, amount, createdAt, topic, partition, offset, receivedAt, _class] in collection: payments

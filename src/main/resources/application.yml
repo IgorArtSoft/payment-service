@@ -18,11 +18,28 @@ spring:
       properties:
         spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
         spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
-
-        spring.json.value.default.type: dev.igorartsoft.paymentservice.kafka.OrderEvent
-        spring.json.trusted.packages: "dev.igorartsoft.paymentservice.kafka"
+        spring.json.value.default.type: dev.igorartsoft.paymentservice.event.OrderEvent
+        spring.json.trusted.packages: "dev.igorartsoft.paymentservice.event,dev.igorartsoft.paymentservice.kafka"
         spring.json.use.type.headers: false
+
+  mongodb:
+    uri: "mongodb://admin:admin123@localhost:27017/paymentdb?authSource=admin"
 
   data:
     mongodb:
-      uri: mongodb://admin:admin123@localhost:27017/paymentdb?authSource=admin				
+      auto-index-creation: false
+
+app:
+  kafka:
+    orders-topic: orders
+
+logging:
+  file:
+    name: logs/payment-service.log
+
+  level:
+    root: INFO
+    dev.igorartsoft.paymentservice: DEBUG
+    org.springframework.kafka: INFO
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.mongodb.driver.protocol.command: INFO
